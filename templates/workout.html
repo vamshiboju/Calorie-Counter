@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORKOUT SUGGESTIONS</title>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    
+}
+header{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("/static/images/workout.jpeg");
+    height: 100vh;
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    color: chocolate;
+    font-size: 20px;
+}
+h1{
+    text-align: center;
+    background: lightblue;
+    margin: 0px 500px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+a{
+    padding: 5px;
+    background: white;
+}
+p{
+    color: yellow;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+    </style>
+</head>
+<body>
+    <header>
+        {% if count1 is not None %}
+        <h1>WEIGHT LOSS</h1>
+        <p>        
+        <br>
+        ------>Full body workout : <a href="https://www.youtube.com/watch?v=5ARgeR1rMTo">Click here</a><br>
+        <br>
+        ------>Home workout : <a href="https://www.youtube.com/watch?v=ISYkFJiWfhI">Click here</a><br>
+        <br>
+        ------>30 days weight loss challenge : <a href="https://www.youtube.com/watch?v=UVJSiuWBNYM">Click here</a><br>
+        <br>
+        ------>Full body workout : <a href="https://www.youtube.com/watch?v=5ARgeR1rMTo">Click here</a><br>
+        <br>
+        ------>Fat burning exercises : <a href="https://www.youtube.com/watch?v=H3jJ29oE8Zg">Click here</a><br>
+        <br>
+        ------>Exercises to lose belly fat : <a href="https://www.youtube.com/watch?v=H3jJ29oE8Zg">Click here</a><br>
+        </p>
+        {% elif count2 is not None %}
+        <h1>HEALTHY WORKOUT</h1>
+        <p>
+            ------>Cardio : <a href="https://www.youtube.com/watch?v=dj03_VDetdw">Click here</a><br>
+            <br>
+            <br>
+            ------>Build muscle : <a href="https://www.youtube.com/watch?v=95846CBGU0M">Click here</a><br>
+            <br>
+            <br>
+            ------>Full body workout : <a href="https://www.youtube.com/watch?v=oAPCPjnU1wA">Click here</a><br>
+            <br>
+        </p>
+        {% elif count3 is not None %}
+        <h1>WEIGHT GAIN</h1>
+        <br>
+        <br>
+        <p>
+        ------>Cardio : <a href="https://www.youtube.com/watch?v=dj03_VDetdw">Click here</a><br>
+        <br>
+        <br>
+        ------>Gain weight at home : <a href="https://www.youtube.com/watch?v=1pRfGMjs8Qs">Click here</a><br>
+        <br>
+        <br>
+        ------>5 exercises that will help you gain weight : <a href="https://www.youtube.com/watch?v=RUaN-LGZ6X0">Click here</a><br>
+        <br>
+        <br>
+        ------>Build muscle : <a href="https://www.youtube.com/watch?v=95846CBGU0M">Click here</a><br>
+        <br>
+        <br>
+        ------>Full body workout : <a href="https://www.youtube.com/watch?v=oAPCPjnU1wA">Click here</a><br>
+        <a href=""></a>
+        {% endif %}
+        </p>
+    </header>
+</body>
+</html>

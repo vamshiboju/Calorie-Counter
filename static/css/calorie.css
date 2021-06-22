@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("/static/images/homebackground.png");
+    height: 100vh;
+}
+img{
+    width: 300px;
+    height: 200px;
+}
+.breakfast{
+    display: inline-block;
+    padding: 50px 50px;
+}
+.lunch{
+    display: inline-block;
+    padding: 50px 50px;
+    text-align: center;
+}
+.dinner{
+    display: inline-block;
+    padding: 50px 50px;
+    text-align: right;
+}
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: blueviolet;
+    display: inline-block;
+    font-size: 50px;
+}
+.h h1{
+    text-align: center;
+    color: burlywood;
+    margin: 10px 500px;
+    background: aqua;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.sub{
+    text-align: 150x;
+    color: blue;
+}
+.target h1{
+    text-align: left;
+}
+.cb h1{
+    text-align: center;
+}
+.cl h1{
+    text-align: right;
+}

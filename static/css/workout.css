@@ -1,0 +1,26 @@
+*{
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),url('/static/images/homebackground.png');
+    padding: 0;
+    margin: 0;
+    
+}
+header{
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("/static/images/workout.jpeg");
+    height: 100vh;
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    color: chocolate;
+    font-size: 20px;
+}
+h1{
+    text-align: center;
+    background: lightblue;
+    margin: 0px 500px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+a{
+    padding: 5px;
+    background: white;
+}

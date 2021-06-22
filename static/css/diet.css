@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 10px 10px;
+    background: lightyellow;
+}
+p{
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: left;
+}
