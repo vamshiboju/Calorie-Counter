@@ -1,1 +1,1 @@
-web gunicorn heathfy.wsgi:apllication --log-file -
+web gunicorn healthfy.wsgi:apllication --log-file -
