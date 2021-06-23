@@ -1,1 +1,1 @@
-web gunicorn healthfy.wsgi:apllication --log-file -
+web gunicorn CalorieCounter.wsgi:apllication --log-file -
