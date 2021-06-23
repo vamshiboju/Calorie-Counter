@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet plan</title>
+    <style>
+    *{
+    margin: 0;
+    background: lightyellow;
+    }
+    p{
+    text-align: center;    
+    }
+    .logo img {
+    width: 200px;
+    float: left;
+    height: auto;
+    border: 2px solid black;
+    margin-left: 20px;
+    }
+    h1{
+        text-align: center;
+        font-family: cursive;
+        text-align: center;
+        font-size: 30px;
+        background-color: aqua;
+        color:  black;
+        padding: 10px 20px;
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-top: 2px;
+    }
+    h2{
+        text-align: left;
+    }
+    .para{
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 20px;
+        border: 5px solid black;
+        padding: 10px 10px;
+        margin: 20px;
+        margin-top: 60px;
+    }
+    .para h2{
+        text-align: center;
+        font-size: 40px;
+    }
+    </style>
+</head>
+<body>
+    <p>
+        <div class="logo">
+            <img src='/static/images/CC Logo.png' width="200" height="150" alt="">
+        </div>
+        {% if count1 is not None %}
+        <h1>WEIGHT LOSS DIET PLAN</h1>
+        <div class="para">
+            <br><br><br>
+            <h2>LACTO VEGETARIAN DIET</h2>
+            <br><br>
+            WHAT TO EAT <br>
+            <br>
+            Vegetables: Tomatoes, spinach, eggplant, onions, cauliflower,
+            mushrooms, cabbage
+            <br>
+            Fruits: mango, papaya, pomegranate, guava, oranges,
+            tamarind, lychee, apples, melon, bananas
+            <br>
+            Nuts and seeds: Cashews, almonds, peanuts, pistachios,
+            pumpkin seeds
+            <br>
+            Roots and tubers: Potatoes, carrots, sweet potatoes, turnips, yams
+            <br>
+            Brown rice, basmati rice,corn, whole-grain bread,nuts and seeds
+            <br>
+            Dairy: Cheese, yogurt, milk, kefir, ghee
+            <br>
+            Herbs and spices: Garlic, ginger, cardamom, cumin, coriander,
+            garam masala, paprika, turmeric, black pepper
+            <br>
+            <br>
+            <br>
+            <h2>INDIAN WEIGHT LOSS DIET</h2>
+            <br>
+            AFTER WAKING UP: water
+            <br>
+            BREAKFAST: low carbohydrates( eggs,broccoli,nuts and seeds)
+            <br>
+            high protien(chicken, fish,prawns,milk yoghurt)
+            <br>
+            LUNCH: salad( carrots, cucumbers,beetroots,cabbage)
+            <br>
+            large portion of protien(brown rice with protien source)(roti or brown rice with dal)
+            <br>
+            EVENING SNACKS: apple with green tea
+            <br>
+            peanuts and green tea
+            <br>
+            DINNER: same as lunch, low carbohydrates and high protien
+            <br>
+            DRINK MORE WATER
+            <br>
+            <br>
+        </div>
+        {% elif count2 is not None %}
+        <h1>HEALTHY DIET</h1>
+        <br>
+        <br>
+        <div class="para">
+            <br>
+            <h2>Steps For Healthy Diet</h2>
+            <br>
+            1.Make half your plate fruits and vegetables
+            <br>
+            <br>
+            2.Make half the grains you eat whole grains
+            <br><br>
+            3.Choose a variety of lean protein foods
+            <br><br>
+            4.Drink water instead of sugary drinks
+            <br><br>
+            5.Eat some seafood
+            <br>
+            <br>
+            6.Reduce Fat, Salt, and Sugar
+            <br><br>
+            7.Prepare Healthy Snacks
+            <br>
+            <br>
+
+        </div>
+        {% elif count3 is not None %}
+        <h1>WEIGHT GAIN DIET PLAN</h1> 
+        <br>
+        <br><br> 
+        <div class="para">
+            <br>
+            1. HOMEMADE PROTIEN SHAKES
+            <br>
+            chocolate banana nut shake,
+            vanilla berry shake,
+            chocolate hazzelnut shake
+            <br>
+            2.MILK OR MILK SMOOTHIES
+            <br>
+            3.NUTS AND NUT BUTTERS
+            <br>
+            4.SALMON AND OILY FISH
+            <br>
+            5.PROTIEN SUPPLEMENTSbr
+            
+            eggs,
+            peas,
+            soy
+            <br>
+            especially for breakfast(protien smoothie)
+            <br>
+            6.AVOCADOS
+            <br>
+            7.CEREALS
+            <br>
+            dry fruit
+            <br>
+            fresh berries
+            <br>
+            8.DARK CHOCOLATE
+            <br>
+            9.WHOLE EGGS
+            <br>
+            10.FULL FAT YOGURT
+            <br>
+            <br>
+        </div>          
+        {% endif %}
+    </p>
+</body>
+</html>

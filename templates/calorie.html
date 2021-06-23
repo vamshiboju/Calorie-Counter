@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Counter</title>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        }
+        header{
+            background-color: lightyellow;
+            background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("/static/images/homebackground.png");
+        }
+        img{
+            width: 300px;
+            height: 200px;
+        }
+        .breakfast{
+            display: inline-block;
+            padding: 50px 80px;
+            color: aqua;
+            font-size: 20px;
+        }
+        .lunch{
+            display: inline-block;
+            padding: 50px 70px;
+            text-align: center;
+            color: aqua;
+            font-size: 20px;
+        }
+        .dinner{
+            display: inline-block;
+            padding: 50px 70px;
+            text-align: right;
+            color: aqua;
+            font-size: 20px;
+        }
+        .h h1{
+        font-family: cursive;
+        text-align: center;
+        font-size: 30px;
+        background-color: aqua;
+        color:  black;
+        padding: 10px 20px;
+        margin-left: 40px;
+        margin-right: 40px;
+        margin-top: 2px;
+        }
+        .sub{
+            text-align: center;
+        }
+        .sub input{
+            text-align: center;
+            font-size: 25px;
+            color: blue;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: italic;
+            padding: 0px 20px;
+            border: 3px solid aqua;
+        }
+        .target {
+           display: inline-block;
+            padding: 50px 80px;
+            font-size: 20px;
+            color: yellow;
+        }
+        .cb{
+            display: inline-block;
+            padding: 50px 80px;
+            text-align: center;
+            font-size: 20px;
+            color: yellow;
+        }
+        .cl {
+            display: inline-block;
+            padding: 50px 20px;
+            text-align: right;
+            font-size: 20px;
+            color: yellow;
+        }
+    </style>
+    <script>
+        function getvalues()
+        {
+            var sum=0;
+            var total='{{ value }}'
+            var selected=new Array();
+            var cb=document.getElementById("tbl");
+            var sb=document.getElementsByTagName("input");
+            for (var i=0;i<sb.length;i++)
+            {
+                if(sb[i].checked)
+                {
+                    selected.push(sb[i].value);
+                }
+            }
+            //if(selected.length>0)
+            //{
+                //document.getElementById("displayvalues").innerHTML=selected;
+            //}
+            for (var i=0;i<selected.length;i++)
+            {
+                sum+=parseFloat(selected[i]);
+            }
+            document.getElementById("display").innerHTML = sum; 
+            document.getElementById("displayvalues").innerHTML=(parseFloat(total)-parseFloat(sum)).toFixed(2);
+        };
+    </script>
+</head>
+<body>
+    <header>
+    <div class="h">
+        <h1>Calorie Counter</h1>
+    </div>
+    <hr>
+    <div  class="target">
+        <h1>Target : {{ value }}</h1>
+    </div>
+    <div  class="cb" >
+        <h1>Calories Burn : <b id="display"></b> </h1>
+    </div>
+    <div class="cl" > 
+        <h1>Calories Left : <b id="displayvalues"></b> </h1>
+    </div>
+    <br>
+    <div class="sub">
+        <input type="button" value="Submit" onclick="getvalues()">
+    </div>
+    <br>
+    <div class="breakfast">
+        <h1>Break Fast</h1>
+        <br>
+        {% for p in breakfast %}
+        <table id="tbl">
+            <tr>
+                <td>
+                    <input type="checkbox" value="{{p.calories}}">
+                </td>
+            </tr>
+        </table>
+        <h2>{{ p.food_name }}</h2>
+        <img src="{{ p.img.url }}" alt=""><br>
+        Calories = {{ p.calories }} <br>
+        quantity = {{ p.quantity }} <br>
+        <br>
+        {% endfor %}
+    </div> 
+
+    <div class="lunch">
+        <h1> Lunch </h1>
+        <br>
+        {% for s in lunch %}
+        <table id="tbl">
+            <tr>
+                <td>
+                    <input type="checkbox" value="{{s.calories}}">
+                </td>
+            </tr>
+        </table>
+        <h2>{{ s.food_name }}</h2>
+        <img src="{{ s.img.url }}" alt=""><br>
+        Calories = {{ s.calories }} <br>
+        quantity = {{ s.quantity }} <br>
+        <br>
+        {% endfor %}
+    </div>
+    <div class="dinner">
+        <h1>Dinner</h1>
+        <br>
+        {% for q in dinner %}
+        <table id="tbl">
+            <tr>
+                <td>
+                    <input type="checkbox" value="{{q.calories}}">
+                </td>
+            </tr>
+        </table>
+        <h2>{{ q.food_name }}</h2>
+        <img src="{{ q.img.url }}" alt=""><br>
+        Calories = {{ q.calories }} <br>
+        quantity = {{ q.quantity }} <br>
+        <br>
+        {% endfor %}
+    </div>
+    </header>
+</body>
+</html>

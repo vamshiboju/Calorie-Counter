@@ -1,0 +1,38 @@
+*{
+    padding: 10px;
+    margin: 10px 20px;
+}
+form{
+    text-align: center;
+    background: cyan;
+    margin-left: 175px;
+    margin-right: 175px;
+}
+form ::placeholder{
+    color: chocolate;
+    background-color: blanchedalmond;
+}
+h1{
+    text-align: center;
+    background-color: chocolate;
+    margin-left: 175px;
+    margin-right: 175px;
+}
+a{
+    text-decoration-style: none;
+    text-decoration-line: none;
+    padding: 5px 30px;
+    background:  cyan;
+    color: chocolate;
+    display: inline-block;
+    margin-left: 10px;
+}
+a:hover{
+    background: cyan;
+    color: chocolate;
+}
+.message{
+    text-align: center;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
